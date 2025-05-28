@@ -61,7 +61,7 @@ The tangent line has equation
   y - y_0 = -(\frac{y_0}{x_0})^{1/3} (x - x_0)
 \end{align*}
 
-for $x_0 > 0, y_0 > 0$ \ . To find the length of the tangent line in the first quadrant, we need to find its x-intercept and y-intercept.
+for $x_0 > 0, y_0 > 0$. To find the length of the tangent line in the first quadrant, we need to find its x-intercept and y-intercept.
 
 First, the y-intercept. When $x = 0$,
 
@@ -158,10 +158,11 @@ Now for $h = 20001$ with altitude $20000$. $L = \sqrt{20001^2 - 20000^2} \approx
   Explain why $\Delta L / \Delta h <= dL / dh$ if the derivative is evaluated at the right endpoint of the interval of uncertainty (or, in other words, $\Delta h > 0$).
 \end{tcolorbox}
 
-\textbf{NOTE: There is a typo with this part of the question.} It uses the phrase "left endpoint of the interval of uncertainty" in conjunction with $\Delta h > 0$. It is only after completing the part above where we have more evidence that $\Delta L / \Delta h <= \frac{dL}{dh}$ should be correct and is what the question should be asking for. \\
+\textbf{NOTE: There is a typo with this part of the question.} It uses the phrase ``left endpoint of the interval of uncertainty'' in conjunction with $\Delta h > 0$. It is only after completing the part above where we have more evidence that $\Delta L / \Delta h <= \frac{dL}{dh}$ should be correct and is what the question should be asking for.
+
+\bigskip
 
 We have that $L^2 + 20000^2 = h^2$. $L >= 0$, and it's pretty obvious that $h >= 20000$ since $L >= 0$, and that $h > L$. To see how $\frac{h}{L}$ changes according to a change in $h$, we take limits on both ends of $h$.
-
 \begin{equation*}
   \lim_{h\to20000^+} \frac{h}{L} = \lim_{h\to20000^+} \frac{h}{\sqrt{h^2 - 20000^2}}
                                  = \lim_{h\to20000^+} \sqrt{\frac{h^2}{h^2 - 20000^2}}
@@ -183,15 +184,19 @@ So we can conclude that $\frac{h}{L} >= 1$. Now, going back to $L^2 + 20000^2 = 
            &= \sqrt{L^2 + 2L\Delta L + (\Delta L)^2 + 20000^2} - h \\
            &= \sqrt{(L^2 + 20000^2) + 2L\Delta L + (\Delta L)^2} - h \\
            &= \sqrt{h^2 + 2L\Delta L + (\Delta L)^2} - h \\
-           &<= \sqrt{h^2 + 2h\Delta L + (\Delta L)^2} - h \tag*{(Since $h >= L$ and $\Delta L > 0$)} \\
+           &<= \sqrt{h^2 + 2h\Delta L + (\Delta L)^2} - h \tag*{(since $h >= L$ and $\Delta L > 0$)} \\
            &= \sqrt{(h + \Delta L)^2} - h \\
            &= h + \Delta L - h \\
            &= \Delta L
 \end{align*}
 
-And $\Delta L >= \Delta h$. Since both $\Delta h > 0$ and $\Delta L > 0$, we have that $\frac{\Delta L}{\Delta h} >= 1$.  Earlier we proved that $\frac{h}{L} >= 1$. Unfortunately, these 2 facts combined \textbf{cannot} help us prove that $\frac{\Delta L}{\Delta h} <= \frac{dL}{dh} = \frac{h}{L}$ for $\Delta h > 0$. In fact, you can try adding $\Delta h < 0$ (which means $\Delta L < 0$) and reach the same conclusion that $\frac{\Delta L}{\Delta h} >= 1$. That is also what we observe when computing the values for $\frac{\Delta L}{\Delta h}$ in the tables above. \\
+And $\Delta L >= \Delta h$. Since both $\Delta h > 0$ and $\Delta L > 0$, we have that $\frac{\Delta L}{\Delta h} >= 1$.  Earlier we proved that $\frac{h}{L} >= 1$. Unfortunately, these 2 facts combined \textbf{cannot} help us prove that $\frac{\Delta L}{\Delta h} <= \frac{dL}{dh} = \frac{h}{L}$ for $\Delta h > 0$. In fact, you can try adding $\Delta h < 0$ (which means $\Delta L < 0$) and reach the same conclusion that $\frac{\Delta L}{\Delta h} >= 1$. That is also what we observe when computing the values for $\frac{\Delta L}{\Delta h}$ in the tables above.
 
-We shall instead offer a more hand-wavy explanation for the phenomenon (which may be wrong). I have tried extremely hard to reason about this problem for a long time and this is the only sufficiently reasonable explanation I can come up with.\\
+\bigskip
+
+We shall instead offer a more hand-wavy explanation for the phenomenon (which may be wrong). I have tried extremely hard to reason about this problem for a long time and this is the only sufficiently reasonable explanation I can come up with.
+
+\bigskip
 
 Earlier, we proved that $\lim_{h \rightarrow 20000^+} \frac{h}{L} = \infty$ and $\lim_{h \rightarrow \infty} \frac{h}{L} = 1$. Since $\frac{dL}{dh} = \frac{h}{L}$, the rate of change of $L$ with respect to $h$ is decreasing (but positive) as $h$ increases. As such, for $\Delta h > 0$, $\frac{\Delta L}{\Delta h}$, which is the actual change in $L$ over the actual change in $h$, decreases as $\Delta h$ increases. In fact, due to the decreasing $\frac{dL}{dh}$, $\Delta L <= \frac{dL}{dh} * \Delta h$ for $\Delta h > 0$, which gives us $\frac{\Delta L}{\Delta h} <= \frac{dL}{dh} = \frac{h}{L}$.
 
@@ -218,7 +223,7 @@ Squaring both sides,
   h &>= \sqrt{\frac{4 * 20000^2}{3}} \approx 23094.010760368154
 \end{align*}
 
-But that is just for $\Delta h > 0$. How about for $\Delta h < 0$? We also require that $\frac{\Delta L}{\Delta h} <= 2$. Since $\Delta h$ and $\Delta L$ have the same sign, we want to find $\Delta h < 0$ that will result in the highest magnitude $\Delta L$.
+But that is just for $\Delta h > 0$. How about for $\Delta h < 0$? We also require that $\frac{\Delta L}{\Delta h} <= 2$. since $\Delta h$ and $\Delta L$ have the same sign, we want to find $\Delta h < 0$ that will result in the highest magnitude $\Delta L$.
 
 Earlier we proved that $\frac{dL}{dh} = \frac{h}{L}$ and $\lim_{h \rightarrow 20000^+} \frac{h}{L} = \infty$ and $\lim_{h \rightarrow \infty} \frac{h}{L} = 1$. Hence $\frac{dL}{dh}$ is decreasing (but positive) as $h$ increases. Hence for $\Delta h < 0$, it makes sense that the maximum $|\Delta L|$ arises from a change in $h$ that brings it all the way back to its minimum allowed value of $20000$. In other words, $\Delta h = -(h - 20000)$. The corresponding value of $\Delta L$ is then $-L$, because if $h$ goes back to $20000$, the constraint $L^2 + 20000^2 = h^2$ causes $L$ to go to $0$. Then $\frac{\Delta L}{\Delta h} = \frac{-L}{-(h - 20000)} = \frac{L}{h - 20000}$ and we require this to be less than or equal to $2$.
 
@@ -233,7 +238,7 @@ Earlier we proved that $\frac{dL}{dh} = \frac{h}{L}$ and $\lim_{h \rightarrow 20
 
 Let $y = 3h^2 - 160000h + 2*10^9$. We solve for $y = 0$, getting $h = \frac{-(-160000) + \sqrt{(-160000)^2 - 4 \cdot 3 \cdot 2 * 10^9}}{2 * 3}$, getting $h = 33333.333333333336$ and $h = 20000$. $\frac{dy}{dh} = 6h - 160000$. At the critical points, $6h - 160000 = 0$ so $h = \frac{160000}{6} = 26666 \frac{2}{3}$. $\frac{d^2 y}{dh^2} = 6 > 0$ so $h = 26666 \frac{2}{3}$ is a minimum point. At $h = 26666 \frac{2}{3}, y = -133333332 < 0$.
 
-This is a pretty "standard" quadratic function, so $y >= 0$ for $h <= 20000$ and $y <= 0$ for $20000 <= h <= 33333 \frac{1}{3}$ and $y >= 0$ for $h >= 33333 \frac{1}{3}$. By the constraints of the problem, $h$ must be at least $20000$, so we need to take $h >= 33333 \frac{1}{3}$. Then $\frac{\Delta L}{\Delta h} <= \frac{L}{h - 20000} <= 2$ for $\Delta h < 0$. Since $33333 \frac{1}{3} > 23094.010760368154$, for $h >= 33333 \frac{1}{3}$, we will also have $\frac{\Delta L}{\Delta h} <= 2$ for $h > 0$.
+This is a pretty ``standard'' quadratic function, so $y >= 0$ for $h <= 20000$ and $y <= 0$ for $20000 <= h <= 33333 \frac{1}{3}$ and $y >= 0$ for $h >= 33333 \frac{1}{3}$. By the constraints of the problem, $h$ must be at least $20000$, so we need to take $h >= 33333 \frac{1}{3}$. Then $\frac{\Delta L}{\Delta h} <= \frac{L}{h - 20000} <= 2$ for $\Delta h < 0$. since $33333 \frac{1}{3} > 23094.010760368154$, for $h >= 33333 \frac{1}{3}$, we will also have $\frac{\Delta L}{\Delta h} <= 2$ for $h > 0$.
 
 Hence for $|\Delta L| <= 2 |\Delta h|$ or equivalently $\frac{\Delta L}{\Delta h} <= 2$, we need $h >= 33333 \frac{1}{3}$.
  
@@ -327,15 +332,15 @@ This is also the only case in this part of the question I will tackle. I have sp
 \textbf{Note to reader:} I'm not sure whether my solution to this part is correct.
 
 \begin{align*}
-  cos \theta &= \frac{L}{h}
+  \cos \theta &= \frac{L}{h}
 \end{align*}
 
 Differentiating implicitly wrt $h$,
 
 \begin{align*}
-  -sin\theta \cdot \frac{d\theta}{dh} &= \frac{dL}{dh} \cdot \frac{1}{h} + L \cdot (-\frac{1}{h^2}) \\
-  \frac{dL}{dh} &= (-sin\theta \cdot \frac{d\theta}{dh} + \frac{L}{h^2}) * h \\
-                &= \frac{L}{h} - h \cdot sin\theta \cdot \frac{d\theta}{dh}
+  -\sin\theta \cdot \frac{d\theta}{dh} &= \frac{dL}{dh} \cdot \frac{1}{h} + L \cdot (-\frac{1}{h^2}) \\
+  \frac{dL}{dh} &= (-\sin\theta \cdot \frac{d\theta}{dh} + \frac{L}{h^2}) * h \\
+                &= \frac{L}{h} - h \cdot \sin\theta \cdot \frac{d\theta}{dh}
 \end{align*}
 
 
@@ -345,17 +350,17 @@ Differentiating implicitly wrt $h$,
 
   Consder a parabolic mirror with equation $y = -1/4 + x^2$ and focus at the origin. (See Problem Set 1.) A ray of light traveling down vertically along the line $x = a$ hits the mirror at the point $(a, b)$ where $b = -1/4 + a^2$ and goes to the origin along a ray at angle $\theta$ measured from the positive x-axis.
 
-  a) Find the formula for $tan\theta$ in terms of $a$ and $b$, and calculate $d\theta / da$ using implicit differentiation. (Express your answer in terms of $a$ and $\theta$.)
+  a) Find the formula for $\tan\theta$ in terms of $a$ and $b$, and calculate $d\theta / da$ using implicit differentiation. (Express your answer in terms of $a$ and $\theta$.)
 \end{tcolorbox}
 
-Assuming $a \neq 0$, $tan \theta = \frac{b}{a} = \frac{-1/4 + a^2}{a} = a - \frac{1}{4a}$
+Assuming $a \neq 0$, $\tan \theta = \frac{b}{a} = \frac{-1/4 + a^2}{a} = a - \frac{1}{4a}$
 
 Differentiating implicitly with respect to $a$,
 
 \begin{align*}
-  (sec^2 \theta) \cdot \frac{d \theta}{da} &= 1 + \frac{1}{4a^2} \\
-  \frac{d \theta}{da} &= cos^2 \theta (1 + \frac{1}{4a^2}) \\
-                      &= cos^2 \theta + \frac{cos^2 \theta}{4a^2}
+  (\sec^2 \theta) \cdot \frac{d \theta}{da} &= 1 + \frac{1}{4a^2} \\
+  \frac{d \theta}{da} &= \cos^2 \theta (1 + \frac{1}{4a^2}) \\
+                      &= \cos^2 \theta + \frac{\cos^2 \theta}{4a^2}
 \end{align*}
 
 \begin{tcolorbox}
@@ -369,26 +374,26 @@ Differentiating implicitly with respect to $a$,
 Since we are given $\theta$ and its accuracy, we actually want $\frac{da}{d \theta}$.
 
 \begin{align*}
-  tan \theta &= a - \frac{1}{4a} \\
-  sec^2 \theta &= \frac{da}{d \theta} + \frac{1}{4a^2} \cdot \frac{da}{d \theta} \\
-  sec^2 \theta &= \frac{da}{d \theta} (1 + \frac{1}{4a^2}) \\
-  da &= \frac{sec^2 \theta}{(1 + \frac{1}{4a^2})} \cdot d \theta \\
-     &= \frac{sec^2 \theta}{\frac{4a^2 + 1}{4a^2}} \cdot d \theta \\
-     &= \frac{4a^2 sec^2 \theta}{4a^2 + 1} \cdot d \theta \\
-     &= \frac{4a^2}{cos^2 \theta (4a^2 + 1)} \cdot d \theta
+  \tan \theta &= a - \frac{1}{4a} \\
+  \sec^2 \theta &= \frac{da}{d \theta} + \frac{1}{4a^2} \cdot \frac{da}{d \theta} \\
+  \sec^2 \theta &= \frac{da}{d \theta} (1 + \frac{1}{4a^2}) \\
+  da &= \frac{\sec^2 \theta}{(1 + \frac{1}{4a^2})} \cdot d \theta \\
+     &= \frac{\sec^2 \theta}{\frac{4a^2 + 1}{4a^2}} \cdot d \theta \\
+     &= \frac{4a^2 \sec^2 \theta}{4a^2 + 1} \cdot d \theta \\
+     &= \frac{4a^2}{\cos^2 \theta (4a^2 + 1)} \cdot d \theta
 \end{align*}
 
 which turns out to be exactly the same thing as if we started from what we have in part (a):
 
 \begin{align*}
-  \frac{d \theta}{da} &= cos^2 \theta + \frac{cos^2 \theta}{4a^2} \\
-  da &= \frac{1}{cos^2 \theta + \frac{cos^2 \theta}{4a^2}} \cdot d \theta \\
-     &= \frac{1}{\frac{4a^2 cos^2 \theta + cos^2 \theta}{4a^2}} \cdot d \theta \\
-     &= \frac{4a^2}{4a^2 cos^2 \theta + cos^2 \theta} \cdot d \theta \\
-     &= \frac{4a^2}{cos^2 \theta (4a^2 + 1)} \cdot d \theta
+  \frac{d \theta}{da} &= \cos^2 \theta + \frac{\cos^2 \theta}{4a^2} \\
+  da &= \frac{1}{\cos^2 \theta + \frac{\cos^2 \theta}{4a^2}} \cdot d \theta \\
+     &= \frac{1}{\frac{4a^2 \cos^2 \theta + \cos^2 \theta}{4a^2}} \cdot d \theta \\
+     &= \frac{4a^2}{4a^2 \cos^2 \theta + \cos^2 \theta} \cdot d \theta \\
+     &= \frac{4a^2}{\cos^2 \theta (4a^2 + 1)} \cdot d \theta
 \end{align*}
 
-At $\theta = -\frac{\pi}{6}$, $tan \theta = tan (-\frac{\pi}{6}) = -\frac{1}{\sqrt{3}}$. But $tan \theta = a - \frac{1}{4a}$. Hence
+At $\theta = -\frac{\pi}{6}$, $\tan \theta = \tan (-\frac{\pi}{6}) = -\frac{1}{\sqrt{3}}$. But $\tan \theta = a - \frac{1}{4a}$. Hence
 
 \begin{align*}
   -\frac{1}{\sqrt{3}} &= a - \frac{1}{4a} \\
@@ -407,9 +412,9 @@ So $a^2 = \frac{40 + 32}{96} = \frac{72}{96} = \frac{3}{4}$ or $a^2 = \frac{40 -
 
 Then $a = \pm \frac{\sqrt{3}}{2}$ or $a = \pm \frac{1}{\sqrt{12}} = \pm \frac{1}{\sqrt{3 * 4}} = \pm \frac{1}{2 \sqrt{3}} = \pm \frac{\sqrt{3}}{6}$.
 
-When $a = \frac{\sqrt{3}}{2}$, $da = \frac{4a^2}{cos^2 \theta (4a^2 + 1)} \cdot d \theta = \frac{4 (\frac{\sqrt{3}}{2})^2}{cos^2 (-\frac{\pi}{6}) (4 \cdot (\frac{\sqrt{3}}{2})^2 + 1)} \cdot d \theta = \frac{4 \cdot \frac{3}{4}}{(\frac{\sqrt{3}}{2})^2 (4 \cdot \frac{3}{4} + 1)} \cdot d \theta = \frac{3}{\frac{3}{4} (3 + 1)} \cdot d \theta = \frac{3}{3} \cdot d \theta = d \theta$. This is also the same for $a = -\frac{\sqrt{3}}{2}$. Hence for $a = \pm \frac{\sqrt{3}}{2}, da = d \theta = 10^{-3}$.
+When $a = \frac{\sqrt{3}}{2}$, $da = \frac{4a^2}{\cos^2 \theta (4a^2 + 1)} \cdot d \theta = \frac{4 (\frac{\sqrt{3}}{2})^2}{\cos^2 (-\frac{\pi}{6}) (4 \cdot (\frac{\sqrt{3}}{2})^2 + 1)} \cdot d \theta = \frac{4 \cdot \frac{3}{4}}{(\frac{\sqrt{3}}{2})^2 (4 \cdot \frac{3}{4} + 1)} \cdot d \theta = \frac{3}{\frac{3}{4} (3 + 1)} \cdot d \theta = \frac{3}{3} \cdot d \theta = d \theta$. This is also the same for $a = -\frac{\sqrt{3}}{2}$. Hence for $a = \pm \frac{\sqrt{3}}{2}, da = d \theta = 10^{-3}$.
 
-When $a = \frac{\sqrt{3}}{6}, da = \frac{4a^2}{cos^2 \theta (4a^2 + 1)} \cdot d \theta = \frac{4 (\frac{\sqrt{3}}{6})^2}{cos^2 (-\frac{\pi}{6}) (4 \cdot (\frac{\sqrt{3}}{6})^2 + 1)} \cdot d \theta = \frac{4 \cdot \frac{3}{36}}{(\frac{\sqrt{3}}{2})^2 (4 \cdot \frac{3}{36} + 1)} \cdot d \theta = \frac{\frac{3}{9}}{\frac{3}{4}(\frac{3}{9} + 1)} \cdot d \theta = \frac{\frac{3}{9}}{\frac{3}{4} \cdot \frac{12}{9}} \cdot d \theta = \frac{1}{3} d \theta$. This is also the same for $a = -\frac{\sqrt{3}}{6}$. Hence for $a = \pm \frac{\sqrt{3}}{6}, da = \frac{1}{3} d \theta = \frac{1}{3} \cdot 10^{-3}$.
+When $a = \frac{\sqrt{3}}{6}, da = \frac{4a^2}{\cos^2 \theta (4a^2 + 1)} \cdot d \theta = \frac{4 (\frac{\sqrt{3}}{6})^2}{\cos^2 (-\frac{\pi}{6}) (4 \cdot (\frac{\sqrt{3}}{6})^2 + 1)} \cdot d \theta = \frac{4 \cdot \frac{3}{36}}{(\frac{\sqrt{3}}{2})^2 (4 \cdot \frac{3}{36} + 1)} \cdot d \theta = \frac{\frac{3}{9}}{\frac{3}{4}(\frac{3}{9} + 1)} \cdot d \theta = \frac{\frac{3}{9}}{\frac{3}{4} \cdot \frac{12}{9}} \cdot d \theta = \frac{1}{3} d \theta$. This is also the same for $a = -\frac{\sqrt{3}}{6}$. Hence for $a = \pm \frac{\sqrt{3}}{6}, da = \frac{1}{3} d \theta = \frac{1}{3} \cdot 10^{-3}$.
 
 \begin{tcolorbox}
   \textbf{Q4. More sensitivity of measurement.}
@@ -418,23 +423,23 @@ When $a = \frac{\sqrt{3}}{6}, da = \frac{4a^2}{cos^2 \theta (4a^2 + 1)} \cdot d 
 \end{tcolorbox}
 
 \begin{align*}
-  tan \theta &= a - \frac{1}{4a} \\
-  tan \theta &= \frac{4a^2 - 1}{4a} \\
-  4a \cdot tan \theta &= 4a^2 - 1 \\
-  4a^2 - 4 (tan \theta) \cdot a - 1 &= 0 \\
-  a &= \frac{-(-4 \cdot tan \theta) \pm \sqrt{(-4 \cdot tan \theta)^2 - 4 \cdot 4 \cdot (-1)}}{2 \cdot 4} \\
-    &= \frac{4 \cdot tan \theta \pm \sqrt{16 \cdot tan^2 \theta + 16}}{8} \\
-    &= \frac{4 \cdot tan \theta \pm \sqrt{16 sec^2 \theta}}{8} \\
-    &= \frac{4 \cdot tan \theta \pm 4 \cdot sec \theta}{8} \\
-    &= \frac{tan \theta \pm sec \theta}{2}
+  \tan \theta &= a - \frac{1}{4a} \\
+  \tan \theta &= \frac{4a^2 - 1}{4a} \\
+  4a \cdot \tan \theta &= 4a^2 - 1 \\
+  4a^2 - 4 (\tan \theta) \cdot a - 1 &= 0 \\
+  a &= \frac{-(-4 \cdot \tan \theta) \pm \sqrt{(-4 \cdot \tan \theta)^2 - 4 \cdot 4 \cdot (-1)}}{2 \cdot 4} \\
+    &= \frac{4 \cdot \tan \theta \pm \sqrt{16 \cdot \tan^2 \theta + 16}}{8} \\
+    &= \frac{4 \cdot \tan \theta \pm \sqrt{16 \sec^2 \theta}}{8} \\
+    &= \frac{4 \cdot \tan \theta \pm 4 \cdot \sec \theta}{8} \\
+    &= \frac{\tan \theta \pm \sec \theta}{2}
 \end{align*}
 
-\textbf{Case 1:} $a = \frac{tan \theta + sec \theta}{2} = \frac{tan (-\frac{\pi}{6}) + sec (-\frac{\pi}{6})}{2} = \frac{-\frac{1}{\sqrt{3}} + \frac{2}{\sqrt{3}}}{2} = \frac{\frac{1}{\sqrt{3}}}{2} = \frac{1}{2 \sqrt{3}} = \frac{\sqrt{3}}{6}$
+\textbf{Case 1:} $a = \frac{\tan \theta + \sec \theta}{2} = \frac{\tan (-\frac{\pi}{6}) + \sec (-\frac{\pi}{6})}{2} = \frac{-\frac{1}{\sqrt{3}} + \frac{2}{\sqrt{3}}}{2} = \frac{\frac{1}{\sqrt{3}}}{2} = \frac{1}{2 \sqrt{3}} = \frac{\sqrt{3}}{6}$
 
 \begin{align*}
-  \frac{da}{d \theta} &= \frac{sec^2 \theta + sec \theta tan \theta}{2} \\
-  da &= \frac{1}{2} (sec^2 \theta + sec \theta tan \theta) \cdot d \theta \\
-     &= \frac{1}{2} (sec^2 (-\frac{\pi}{6}) + sec(-\frac{\pi}{6}) tan(-\frac{\pi}{6})) \cdot d \theta \\
+  \frac{da}{d \theta} &= \frac{\sec^2 \theta + \sec \theta \tan \theta}{2} \\
+  da &= \frac{1}{2} (\sec^2 \theta + \sec \theta \tan \theta) \cdot d \theta \\
+     &= \frac{1}{2} (\sec^2 (-\frac{\pi}{6}) + \sec(-\frac{\pi}{6}) \tan(-\frac{\pi}{6})) \cdot d \theta \\
      &= \frac{1}{2} ((\frac{2}{\sqrt{3}})^2 + \frac{2}{\sqrt{3}}(-\frac{1}{\sqrt{3}})) \cdot d \theta \\
      &= \frac{1}{2} (\frac{4}{3} - \frac{2}{3}) \cdot d \theta \\
      &= \frac{1}{2} \cdot \frac{2}{3} \cdot d \theta \\
@@ -443,12 +448,12 @@ When $a = \frac{\sqrt{3}}{6}, da = \frac{4a^2}{cos^2 \theta (4a^2 + 1)} \cdot d 
 
 which agrees with what we've got in part (b).
 
-\textbf{Case 2:} $a = \frac{tan \theta - sec \theta}{2} = \frac{tan (-\frac{\pi}{6}) - sec (-\frac{\pi}{6})}{2} = \frac{-\frac{1}{\sqrt{3}} - \frac{2}{\sqrt{3}}}{2} = \frac{-\frac{3}{\sqrt{3}}}{2} = -\frac{3}{2 \sqrt{3}} = -\frac{3 \sqrt{3}}{6} = -\frac{\sqrt{3}}{2}$
+\textbf{Case 2:} $a = \frac{\tan \theta - \sec \theta}{2} = \frac{\tan (-\frac{\pi}{6}) - \sec (-\frac{\pi}{6})}{2} = \frac{-\frac{1}{\sqrt{3}} - \frac{2}{\sqrt{3}}}{2} = \frac{-\frac{3}{\sqrt{3}}}{2} = -\frac{3}{2 \sqrt{3}} = -\frac{3 \sqrt{3}}{6} = -\frac{\sqrt{3}}{2}$
 
 \begin{align*}
-  \frac{da}{d \theta} &= \frac{sec^2 \theta - sec \theta tan \theta}{2} \\
-  da &= \frac{1}{2} (sec^2 \theta - sec \theta tan \theta) \cdot d \theta \\
-     &= \frac{1}{2} (sec^2 (-\frac{\pi}{6}) - sec(-\frac{\pi}{6}) tan(-\frac{\pi}{6})) \cdot d \theta \\
+  \frac{da}{d \theta} &= \frac{\sec^2 \theta - \sec \theta \tan \theta}{2} \\
+  da &= \frac{1}{2} (\sec^2 \theta - \sec \theta \tan \theta) \cdot d \theta \\
+     &= \frac{1}{2} (\sec^2 (-\frac{\pi}{6}) - \sec(-\frac{\pi}{6}) \tan(-\frac{\pi}{6})) \cdot d \theta \\
      &= \frac{1}{2} ((\frac{2}{\sqrt{3}})^2 - \frac{2}{\sqrt{3}}(-\frac{1}{\sqrt{3}})) \cdot d \theta \\
      &= \frac{1}{2} (\frac{4}{3} + \frac{2}{3}) \cdot d \theta \\
      &= \frac{1}{2} \cdot 2 \cdot d \theta \\
@@ -464,7 +469,7 @@ which agrees with what we've got in part (b).
 
 Let $x = \sqrt[3]{9}$. This is our quantity of interest. But we need to convert this to something we can solve using Newton's method. Cubing both sides, we have $x^3 = 9$ and hence $x^3 - 9 = 0$.
 
-Recall that the formula for Newton's method is given by $x_{n+1} = x_n - \frac{y_n}{f'(x_n)} = x_n - \frac{f(x_n)}{f'(x_n)}$, where $x_n$ is the $n$th guess. In this case, $f(x) = x^3 - 9$ and $f'(x) = \frac{d}{dx} x^3 - 9 = 3x^2$. Since $2^3 = 8$ is close to 9 and is a cube that we know, let's use use $x_0 = 2$ as our initial guess.
+Recall that the formula for Newton's method is given by $x_{n+1} = x_n - \frac{y_n}{f'(x_n)} = x_n - \frac{f(x_n)}{f'(x_n)}$, where $x_n$ is the $n$th guess. In this case, $f(x) = x^3 - 9$ and $f'(x) = \frac{d}{dx} x^3 - 9 = 3x^2$. since $2^3 = 8$ is close to 9 and is a cube that we know, let's use use $x_0 = 2$ as our initial guess.
 
 \begin{center}
   \begin{tabular}{|c|c|c|c|}
@@ -540,21 +545,22 @@ The difference between this quadratic approximation and the exact answer is appr
 
 
 \begin{tcolorbox}
+	\parskip10pt\relax
   \textbf{Q6. Hypocycloid, again} \\
-  Here we derive the equation for the hypocycloid of Problem 2 from the sweeping out property directly. This takes quite a bit longer. We will look at the hypocycloid from yet another (easier) point of view later on. \\
-  \\
-  Think of the first quadrant of the $xy$-plane as representing the region to the right of a wall with the ground as the positive $x$-axis and the wall as the positive $y$-axis. A unit length ladder is placed vertically against the wall. The bottom of the ladder is at $x = 0$ and slides to the right along the $x$-axis until the ladder is horizontal. At the same time, the top of the aldder is dragged down the $y$-axis ending at the origin $(0, 0)$. We are going to describe the region swept out by this motion, in other words, the blurry region formed in a photograph of the motion if the eye of the camera is open the whole time.\\
-  \\
-  a) Suppose that $L_1$ is the line segment from $(0,y_1)$ to $(x_1,0)$ and $L_2$ is the line segment from $(0,y_2)$ to $(x_2,0)$. Find the formula for the point of intersection $(x_3,y_3)$ of the two line segments. Don't expect the formula to be simple: It must involve all four parameters $x_1, x_2, y_1,$ and $y_2$. But simplify as much as possible! \\
-  \\
-  It's important to make sure you have the right formula before proceeding further. You can doublecheck your formulas in several ways. (This is optional.)\\
-  \\
-  i) If $y_2 = 0$, then $x_3 = x_1$.\\
-  \\
-  ii) When the $x's$ and $y's$ are interchanged the formulas should be the same. What transformation of the plane does the exchange of $x$ and $y$ represent?\\
-  \\
-  iii) It is impossible to find $x_3$ and $y_3$ if the lines are parallel, so the denominator in the formula must be zero when $L_1$ and $L_2$ have the same slope.\\
-  \\
+  Here we derive the equation for the hypocycloid of Problem 2 from the sweeping out property directly. This takes quite a bit longer. We will look at the hypocycloid from yet another (easier) point of view later on.
+  
+  Think of the first quadrant of the $xy$-plane as representing the region to the right of a wall with the ground as the positive $x$-axis and the wall as the positive $y$-axis. A unit length ladder is placed vertically against the wall. The bottom of the ladder is at $x = 0$ and slides to the right along the $x$-axis until the ladder is horizontal. At the same time, the top of the aldder is dragged down the $y$-axis ending at the origin $(0, 0)$. We are going to describe the region swept out by this motion, in other words, the blurry region formed in a photograph of the motion if the eye of the camera is open the whole time.
+  
+  a) Suppose that $L_1$ is the line segment from $(0,y_1)$ to $(x_1,0)$ and $L_2$ is the line segment from $(0,y_2)$ to $(x_2,0)$. Find the formula for the point of intersection $(x_3,y_3)$ of the two line segments. Don't expect the formula to be simple: It must involve all four parameters $x_1, x_2, y_1,$ and $y_2$. But simplify as much as possible!
+  
+  It's important to make sure you have the right formula before proceeding further. You can doublecheck your formulas in several ways. (This is optional.)
+  
+  i) If $y_2 = 0$, then $x_3 = x_1$.
+  
+  ii) When the $x's$ and $y's$ are interchanged the formulas should be the same. What transformation of the plane does the exchange of $x$ and $y$ represent?
+  
+  iii) It is impossible to find $x_3$ and $y_3$ if the lines are parallel, so the denominator in the formula must be zero when $L_1$ and $L_2$ have the same slope.
+  
   iv) Rescaling all variables by a factor $c$ leaves the formula unchanged, so the numerator of the formula for $x_3$ and $y_3$ should have degree (in all variables) one greater than the denominator.
 \end{tcolorbox}
 
@@ -605,7 +611,7 @@ Substitute $x_3 = \frac{(y_2 - y_1) x_1 x_2}{x_1 y_2 - x_2 y_1}$ into equation o
 \end{align*}
 
 \begin{tcolorbox}
-  Check (ii) When the $x's$ and $y's$ are interchanged the formulas should be the same. What transformation of the plane does the exchange of $x$ and $y$ represent?\\
+  Check (ii) When the $x's$ and $y's$ are interchanged the formulas should be the same. What transformation of the plane does the exchange of $x$ and $y$ represent?
 \end{tcolorbox}
 
 Original equations:
@@ -634,7 +640,7 @@ Swap $x's$ and $y's$ in $y_3 = \frac{y_1 y_2 (x_1 - x_2)}{x_1 y_2 - x_2 y_1}$:
 This exchange of $x$ and $y$ should represent reflection about the line $y = x$.
 
 \begin{tcolorbox}
-  Check (iii) It is impossible to find $x_3$ and $y_3$ if the lines are parallel, so the denominator in the formula must be zero when $L_1$ and $L_2$ have the same slope.\\
+  Check (iii) It is impossible to find $x_3$ and $y_3$ if the lines are parallel, so the denominator in the formula must be zero when $L_1$ and $L_2$ have the same slope.
 \end{tcolorbox}
 
 Suppose the lines are parallel. Then the slopes of $L_1$ and $L_2$ must be the same. Hence
