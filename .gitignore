@@ -3,3 +3,5 @@
 *.out
 *.zip
 *.pdf
+*.fls
+*.fdb_latexmk

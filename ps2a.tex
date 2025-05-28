@@ -49,25 +49,25 @@ so the even function is $\frac{x^2 + 1}{x^2 - 1}$ and the odd function is -$\fra
 
 
 \begin{tcolorbox}
-  \textbf{Q2a)} Compute $(d/dx) tan^3(x^4)$
+  \textbf{Q2a)} Compute $(d/dx) \tan^3(x^4)$
 \end{tcolorbox}
 
 \begin{align*}
-  \frac{d}{dx} tan^3 (x^4) &= \frac{d}{dx} (tan(x^4))^3\\
-                           &= 3 \cdot (tan(x^4))^2 \cdot \frac{d}{dx} tan(x^4)\\
-                           &= 3(tan(x^4))^2 \cdot 4x^3 sec^2(x^4)\\
-                           &= 12x^3 (sec(x^4)tan(x^4))^2
+  \frac{d}{dx} \tan^3 (x^4) &= \frac{d}{dx} (\tan(x^4))^3\\
+                           &= 3 \cdot (\tan(x^4))^2 \cdot \frac{d}{dx} \tan(x^4)\\
+                           &= 3(\tan(x^4))^2 \cdot 4x^3 \sec^2(x^4)\\
+                           &= 12x^3 (\sec(x^4)\tan(x^4))^2
 \end{align*}
 
 
 \begin{tcolorbox}
-  \textbf{Q2b)} Compute $(d/dy)(sin^2y\ cos^2y)$
+  \textbf{Q2b)} Compute $(d/dy)(\sin^2y\cos^2y)$
 \end{tcolorbox}
 
 \begin{align*}
-  \frac{d}{dy} (sin^2y\ cos^2y) &= 2sin(y)cos(y) \cdot cos^2y + sin^2y \cdot 2cos(y) \cdot -sin(y)\\
-                                &= 2sin(y)cos^3(y) - 2sin^3(y)cos(y)\\
-                                &= 2sin(y)cos(y)(cos^2(y) - sin^2(y))
+  \frac{d}{dy} (\sin^2y\cos^2y) &= 2\sin(y)\cos(y) \cdot \cos^2y + \sin^2y \cdot 2\cos(y) \cdot -\sin(y)\\
+                                &= 2\sin(y)\cos^3(y) - 2\sin^3(y)\cos(y)\\
+                                &= 2\sin(y)\cos(y)(\cos^2(y) - \sin^2(y))
 \end{align*}
 
 
@@ -93,26 +93,26 @@ so the even function is $\frac{x^2 + 1}{x^2 - 1}$ and the odd function is -$\fra
 
 
 \begin{tcolorbox}
-  \textbf{Q4a)} The function $cos^{-1}x$ is the inverse of the $cos\theta$ on $0 \leq \theta \leq \pi$. Use implicit differentiation to derive the formula for $(d/dx)cos^{-1}x$. Pay particular attention to the sign of the square root. (See the book or lecture for the case of the inverse of sine.)
+  \textbf{Q4a)} The function $\cos^{-1}x$ is the inverse of the $\cos\theta$ on $0 \leq \theta \leq \pi$. Use implicit differentiation to derive the formula for $(d/dx)\cos^{-1}x$. Pay particular attention to the sign of the square root. (See the book or lecture for the case of the inverse of sine.)
 \end{tcolorbox}
 
-Let $y = cos^{-1}x$. Then $cos(y) = x$. Differentiating implicitly with respect to $x$:
+Let $y = \cos^{-1}x$. Then $\cos(y) = x$. Differentiating implicitly with respect to $x$:
 
 \begin{align*}
-  -sin(y) \cdot \frac{dy}{dx} &= 1\\
-  \frac{dy}{dx} &= -\frac{1}{sin(y)}
+  -\sin(y) \cdot \frac{dy}{dx} &= 1\\
+  \frac{dy}{dx} &= -\frac{1}{\sin(y)}
 \end{align*}
 
-$cos(y) = x$ represents a triangle whose angle is $y$, adjacent side has length $x$ and hypotenuse has length $1$. Hence its opposite side has length $\sqrt{1 - x^2}$ and $sin(y) = \frac{\sqrt{1 - x^2}}{1} = \sqrt{1 - x^2}$. We take the positive square root because for $0 \leq x \leq \pi$, $sin(x) \geq 0$.
+$\cos(y) = x$ represents a triangle whose angle is $y$, adjacent side has length $x$ and hypotenuse has length $1$. Hence its opposite side has length $\sqrt{1 - x^2}$ and $\sin(y) = \frac{\sqrt{1 - x^2}}{1} = \sqrt{1 - x^2}$. We take the positive square root because for $0 \leq x \leq \pi$, $\sin(x) \geq 0$.
 
 \begin{align*}
-  \frac{dy}{dx} &= -\frac{1}{sin(y)}\\
+  \frac{dy}{dx} &= -\frac{1}{\sin(y)}\\
                 &= -\frac{1}{\sqrt{1 - x^2}}
 \end{align*}
 
 
 \begin{tcolorbox}
-  \textbf{Q4b)} Without calculation, explain why $(d/dx)cos^{-1}x + (d/dx)sin^{-1}x = 0$.
+  \textbf{Q4b)} Without calculation, explain why $(d/dx)\cos^{-1}x + (d/dx)\sin^{-1}x = 0$.
 \end{tcolorbox}
 
 
